@@ -11,7 +11,7 @@ class CreateDb
         public $con;
 
 
-        // class constructor
+        //constructor
     public function __construct(
         $dbname = "Newdb",
         $tablename = "Productdb",
@@ -26,10 +26,10 @@ class CreateDb
       $this->username = $username;
       $this->password = $password;
 
-      // create connection
+      // conexiunea
         $this->con = mysqli_connect($servername, $username, $password);
 
-        // Check connection
+        // verificam conexiunea
         if (!$this->con){
             die("Connection failed : " . mysqli_connect_error());
         }
@@ -42,8 +42,8 @@ class CreateDb
 
             $this->con = mysqli_connect($servername, $username, $password, $dbname);
 
-            // sql to create new table
-            $sql = " CREATE TABLE IF NOT EXISTS $tablename
+            // sql new table
+                        $sql = " CREATE TABLE IF NOT EXISTS $tablename
                             (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                              product_name VARCHAR (25) NOT NULL,
                              product_price FLOAT,
@@ -59,7 +59,7 @@ class CreateDb
         }
     }
 
-    // get product from the database
+    // ia elem din db
     public function getData(){
         $sql = "SELECT * FROM $this->tablename";
 

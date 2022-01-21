@@ -19,14 +19,14 @@ function component($productname, $productprice, $productimg, $productid){
                                 <i class=\"far fa-star\"></i>
                             </h6>
                             <p class=\"card-text\">
-                                Some quick example text to build on the card.
+                                Cea mai proaspata mancare din Regie!
                             </p>
                             <h5>
-                                <small><s class=\"text-secondary\">$519</s></small>
+                                <small><s class=\"text-secondary\">$35</s></small>
                                 <span class=\"price\">$$productprice</span>
                             </h5>
 
-                            <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
+                            <button type=\"submit\" class=\"btn btn-danger my-3\" name=\"add\">Add to Cart <i class=\"fas fa-shopping-cart\"></i></button>
                              <input type='hidden' name='product_id' value='$productid'>
                         </div>
                     </div>
@@ -47,9 +47,9 @@ function cartElement($productimg, $productname, $productprice, $productid){
                             </div>
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$productname</h5>
-                                <small class=\"text-secondary\">Seller: dailytuition</small>
+                                <small class=\"text-secondary\">Seller: Ela</small>
                                 <h5 class=\"pt-2\">$$productprice</h5>
-                                <button type=\"submit\" class=\"btn btn-warning\">Save for Later</button>
+                                <button type=\"submit\" class=\"btn btn-danger\">Save for Later</button>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remove</button>
                             </div>
                             <div class=\"col-md-3 py-5\">
