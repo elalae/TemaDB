@@ -12,7 +12,7 @@ if (isset($_POST['remove'])){
       foreach ($_SESSION['cart'] as $key => $value){
           if($value["product_id"] == $_GET['id']){
               unset($_SESSION['cart'][$key]);
-              echo "<script>alert('Product has been Removed...!')</script>";
+              echo "<script>alert('Produsul a fost scos!')</script>";
               echo "<script>window.location = 'cart.php'</script>";
           }
       }
@@ -68,7 +68,7 @@ if (isset($_POST['remove'])){
                             }
                         }
                     }else{
-                        echo "<h5>Cart is Empty</h5>";
+                        echo "<h5>Cosul este gol</h5>";
                     }
 
                 ?>
@@ -78,25 +78,25 @@ if (isset($_POST['remove'])){
         <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
 
             <div class="pt-4">
-                <h6>PRICE DETAILS</h6>
+                <h6>DETALII SUMA</h6>
                 <hr>
                 <div class="row price-details">
                     <div class="col-md-6">
                         <?php
                             if (isset($_SESSION['cart'])){
                                 $count  = count($_SESSION['cart']);
-                                echo "<h6>Price ($count items)</h6>";
+                                echo "<h6>Pret ($count items)</h6>";
                             }else{
-                                echo "<h6>Price (0 items)</h6>";
+                                echo "<h6>Pret (0 items)</h6>";
                             }
                         ?>
-                        <h6>Delivery Charges</h6>
+                        <h6>Taxa Livrare</h6>
                         <hr>
-                        <h6>Amount Payable</h6>
+                        <h6>Total</h6>
                     </div>
                     <div class="col-md-6">
                         <h6>$<?php echo $total; ?></h6>
-                        <h6 class="text-success">FREE</h6>
+                        <h6 class="text-success">GRATIS</h6>
                         <hr>
                         <h6>$<?php
                             echo $total;
